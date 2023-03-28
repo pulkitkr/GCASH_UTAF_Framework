@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Android]" parallel="tests">
+  <parameter name="url" value="https://www.google.com/"/>
+  <parameter name="browserType" value="chrome"/>
+  <listeners>
+    <listener class-name="com.utility.ExtentReporter"/>
+  </listeners>
+  <test thread-count="2" name="GCASH1(failed)" parallel="tests">
+    <parameter name="portno" value="4723"/>
+    <parameter name="deviceName" value="2713171100013955"/>
+    <classes>
+      <class name="com.gcash.test.GCashLogin">
+        <methods>
+          <include name="gSvaeHome"/>
+          <include name="before"/>
+        </methods>
+      </class> <!-- com.gcash.test.GCashLogin -->
+    </classes>
+  </test> <!-- GCASH1(failed) -->
+</suite> <!-- Failed suite [Android] -->

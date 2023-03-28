@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="iOS" parallel="false" thread-count="1">
+
+<parameter name="browserType" value="chrome"/>
+<parameter name="url" value="https://www.google.com/"></parameter>
+	<listeners>
+		<!-- <listener class-name="com.parameters.ParameterInjector" /> -->
+		<listener class-name="com.utility.ExtentReporter" />
+		<!-- <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/> -->
+		<!-- <listener class-name="com.utility.MyTranformer"/> -->
+	</listeners>
+
+	<!-- <test name="MLWallet" parallel="methods" thread-count="2"> -->
+	<test name="GCASH">
+		<parameter name="portno" value="4723"></parameter>
+		<parameter name="deviceName" value="00008020-00127C6214F9002E"></parameter>		
+		<classes>
+			<!-- RZ8T20EDQ5W
+			4TWOGQCM6589MBZD -->
+
+			<class name="com.gcash.test.GCashLogin">
+				
+			</class>
+		</classes>
+	</test>
+
+	<!--<test name="GCASH1">
+		<parameter name="portno" value="4723"></parameter>
+		<parameter name="deviceName" value="2713171100013955"></parameter>
+		<classes>
+			<class name="com.gcash.test.GCashLogoutScripts">
+				
+			</class>
+		</classes>
+	</test>-->
+
+</suite>
